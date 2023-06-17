@@ -41,9 +41,11 @@ export default class Lab extends Scene {
   }
 
   preload(){
-    this.load.tilemapTiledJSON('tilemap-lab-info', 'mapas/sala.json')
+    //this.load.tilemapTiledJSON('tilemap-lab-info', 'mapas/sala.json')
+    this.load.tilemapTiledJSON('tilemap-fazenda', 'mapas/fazenda.json')
 
-    this.load.image('tiles-office', 'mapas/tiles/tiles_office.png')
+    //this.load.image('tiles-office', 'mapas/tiles/tiles_office.png')
+    this.load.image('geral', 'mapas/tiles/geral.png')
     this.load.atlas('hud', 'hud.png', 'hud.json')
 
     this.load.spritesheet('player', 'carlos.png', {
@@ -74,17 +76,17 @@ export default class Lab extends Scene {
 
   createMap(){
     this.map = this.make.tilemap({
-      key: 'tilemap-lab-info',
+      key: 'tilemap-fazenda',
       tileHeight: CONFIG.TILE_SIZE,
       tileWidth: CONFIG.TILE_SIZE
     })
-    this.map.addTilesetImage('tiles_office', 'tiles-office')
+    this.map.addTilesetImage('geral', 'geral')
   }
 
  
 
   createLayers(){
-    const tilesOffice = this.map.getTileset('tiles_office') // Nome no tiles
+    const tilesOffice = this.map.getTileset('geral') // Nome no tiles
     const layersNames = this.map.getTileLayerNames();
 
     for (let i = 0; i < layersNames.length; i++) {
@@ -93,10 +95,10 @@ export default class Lab extends Scene {
       // Define a profundidade de cada camada (Layer)
       this.layers[name].setDepth(i);
 
-      if(name.endsWith('Collision')){
+      if(name.endsWith('collision')){
         this.layers[name].setCollisionByProperty({ collide: true })
         this.layers[name].setTileIndexCallback(0, this, (sprite, tile) => {
-            console.log(`Collided with ${tile.properties.object}, ${sprite}`);
+            console.log(`collided with ${tile.properties.object}, ${sprite}`);
           }
         );
 
@@ -127,8 +129,8 @@ export default class Lab extends Scene {
 
     console.log(this.groupObjects)
 
-    const objects = this.map.createFromObjects("Objeto", "Objeto", "Objeto", "Objeto", {
-      name: "Placa", name: "Quadro", name: "Lixeira", name: "Cadeira"
+    const objects = this.map.createFromObjects("Objeto", "Objeto", {
+      name: "placa", name: "loja"
     });
 
     console.log(objects)
@@ -154,7 +156,7 @@ export default class Lab extends Scene {
     for (let i = 0; i < layersNames.length; i++) {
       const name = layersNames[i];
       
-      if(name.endsWith('Collision')){
+      if(name.endsWith('collision')){
         this.physics.add.collider(this.player, this.layers[name], this.Collided(), null, this)
       }
     }

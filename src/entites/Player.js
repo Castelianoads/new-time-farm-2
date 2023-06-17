@@ -317,12 +317,12 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
       frameRate: this.frameRate,
       repeat: -1
     });
-    this.anims.create({
-      key: 'fire-down',
-      frames: this.anims.generateFrameNumbers('player', { start: 238, end: 240 }),
-      frameRate: this.frameRate,
-      repeat: -1
-    });
+    // this.anims.create({
+    //   key: 'fire-down',
+    //   frames: this.anims.generateFrameNumbers('player', { start: 238, end: 240 }),
+    //   frameRate: this.frameRate,
+    //   repeat: -1
+    // });
   }
 
 }

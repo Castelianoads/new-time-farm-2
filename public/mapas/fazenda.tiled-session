@@ -1,0 +1,75 @@
+{
+    "activeFile": "fazenda.tmx",
+    "expandedProjectPaths": [
+    ],
+    "fileStates": {
+        "": {
+            "scaleInDock": 1
+        },
+        "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/loja.tmx": {
+            "scale": 2.0235,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 239.1895231035335,
+                "y": 199.6540647393131
+            }
+        },
+        "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/loja.tmx#tiles_floors": {
+            "scaleInDock": 1
+        },
+        "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/loja.tmx#tiles_store": {
+            "scaleInDock": 1
+        },
+        "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/loja.tmx#tiles_walls": {
+            "scaleInDock": 1
+        },
+        "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/sala.tmx": {
+            "expandedObjectLayers": [
+                8
+            ],
+            "scale": 1.580859375,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 75.27551272547566,
+                "y": 254.29206819866567
+            }
+        },
+        "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/sala.tmx#tiles_lixeiras": {
+            "scaleInDock": 1
+        },
+        "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/sala.tmx#tiles_office": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "fazenda.tmx": {
+            "expandedObjectLayers": [
+                9
+            ],
+            "scale": 1.8208333333333333,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 260.8695652173913,
+                "y": 180.68649885583525
+            }
+        },
+        "fazenda.tmx#agua1_anim": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "fazenda.tmx#geral": {
+            "scaleInDock": 2,
+            "scaleInEditor": 1.5
+        }
+    },
+    "last.exportedFilePath": "C:/Users/carlo/OneDrive/Área de Trabalho/new-time-farm-2/public/mapas",
+    "openFiles": [
+        "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/sala.tmx",
+        "fazenda.tmx"
+    ],
+    "project": "fazenda.tiled-project",
+    "recentFiles": [
+        "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/sala.tmx",
+        "fazenda.tmx",
+        "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/loja.tmx"
+    ]
+}
