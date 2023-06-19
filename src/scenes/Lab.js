@@ -41,22 +41,37 @@ export default class Lab extends Scene {
   }
 
   preload(){
-    //this.load.tilemapTiledJSON('tilemap-lab-info', 'mapas/sala.json')
     this.load.tilemapTiledJSON('tilemap-fazenda', 'mapas/fazenda.json')
 
-    //this.load.image('tiles-office', 'mapas/tiles/tiles_office.png')
     this.load.image('geral', 'mapas/tiles/geral.png')
+    this.load.image('agua1_anim', 'mapas/tiles/agua1_anim.png')
     this.load.atlas('hud', 'hud.png', 'hud.json')
-
-    this.load.spritesheet('player', 'carlos.png', {
-      frameWidth: CONFIG.TILE_SIZE,
+    
+    this.load.spritesheet('player', 'mapas/fazenda/main_character.png', {
+      frameWidth: 48,
+      frameHeight: 48
+    });
+    this.load.spritesheet('arvore_normal', 'mapas/fazenda/arvore_anim.png', {
+      frameWidth: 48,
       frameHeight: CONFIG.TILE_SIZE * 2
     });
-
-    this.load.spritesheet('Lixeira', 'mapas/tiles/lixeiras_spritesheet.png', {
-      frameWidth: CONFIG.TILE_SIZE,
+    this.load.spritesheet('arvore_pera', 'mapas/fazenda/arvore_peras_anim.png', {
+      frameWidth: 48,
       frameHeight: CONFIG.TILE_SIZE * 2
     });
+    this.load.spritesheet('arvore_laranja', 'mapas/fazenda/arvore_laranjas_anim.png', {
+      frameWidth: 48,
+      frameHeight: CONFIG.TILE_SIZE * 2
+    });
+    this.load.spritesheet('arvore_maca', 'mapas/fazenda/arvore_macas_anim.png', {
+      frameWidth: 48,
+      frameHeight: CONFIG.TILE_SIZE * 2
+    });
+    this.load.spritesheet('arvore_pessego', 'mapas/fazenda/arvore_pessegos_anim.png', {
+      frameWidth: 48,
+      frameHeight: CONFIG.TILE_SIZE * 2
+    });
+    
   }
 
   create(){
@@ -81,18 +96,26 @@ export default class Lab extends Scene {
       tileWidth: CONFIG.TILE_SIZE
     })
     this.map.addTilesetImage('geral', 'geral')
+    this.map.addTilesetImage('agua1_anim', 'agua1_anim')
   }
 
  
 
   createLayers(){
     const tilesOffice = this.map.getTileset('geral') // Nome no tiles
+    const tilesOffice2 = this.map.getTileset('agua1_anim') // Nome no tiles
     const layersNames = this.map.getTileLayerNames();
 
     for (let i = 0; i < layersNames.length; i++) {
       const name = layersNames[i];
-      this.layers[name] = this.map.createLayer(name, [tilesOffice], 0, 0)
+      console.log(name);
+      if(name == 'abaixo agua collision'){
+        this.layers[name] = this.map.createLayer(name, [tilesOffice2], 0, 0)
+      } else{
+        this.layers[name] = this.map.createLayer(name, [tilesOffice], 0, 0)
+      }
       // Define a profundidade de cada camada (Layer)
+      console.log(this.layers[name]);
       this.layers[name].setDepth(i);
 
       if(name.endsWith('collision')){
@@ -147,8 +170,8 @@ export default class Lab extends Scene {
 
   createPlayer(){
     this.touch = new Touch(this, 16 * 8, 16 * 5);
-    this.player = new Player(this, 16 * 8, 16 * 5, this.touch);
-    this.player.setDepth(19);        
+    this.player = new Player(this, 18 * 8, 20 * 5, this.touch);
+    this.player.setDepth(1);        
   }
 
   createColliders(){

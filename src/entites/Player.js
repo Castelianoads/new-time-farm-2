@@ -26,24 +26,15 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
     this.direction = 'down';
     this.cursors = this.scene.input.keyboard.createCursorKeys()
 
-    this.setOrigin(0, 0.5)
+    this.setOrigin(0.5, 0.5)
 
-    this.body.setSize(14, 10);
-    this.body.setOffset(1, 22);
+    this.body.setSize(12, 8);
+    this.body.setOffset(18, 24);
     this.initAnimations();
 
     this.scene.events.on(Phaser.Scenes.Events.UPDATE, this.update, this)
 
     // this.play('idle-right');
-    // this.play('idle-up');
-    // this.play('idle-left');
-    // this.play('idle-down');
-    // this.play('walk-right');
-    // this.play('walk-up');
-    // this.play('walk-left');
-    // this.play('walk-down');
-    this.play('sit-left');
-    this.play('sit-right');
   }
   
   update(){
@@ -76,9 +67,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
     }
     
     if(this.body.velocity.x === 0 && this.body.velocity.y === 0){ // esta parado
-      this.play('idle-' + this.direction, true)
+      this.play('idle_' + this.direction, true)
     } else { // Em movimento
-      this.play('walk-' + this.direction, true)
+      this.play('walk_' + this.direction, true)
     }
 
     // Fazer o touch seguir o player
@@ -87,20 +78,20 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
     
     switch(this.direction){
       case 'down':
-        tX = 0;
-        tY = distance;
+        tX = -8;
+        tY = 7;
         break
       case 'up':
-        tX = 0;
-        tY = - distance + CONFIG.TILE_SIZE;
+        tX = -8;
+        tY = -2;
         break
       case 'right':
-        tX = distance / 2;
-        tY = CONFIG.TILE_SIZE / 2;
+        tX = 0;
+        tY = 0;
         break
       case 'left':
-        tX = - distance / 2;
-        tY = CONFIG.TILE_SIZE / 2;
+        tX = - distance;
+        tY = 0;
         break
       case 'space':
         tX = 0;
@@ -112,210 +103,288 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
   }
 
   initAnimations(){
-    // Idle
+    
+    // Parado
     this.anims.create({
-      key: 'idle-right',
-      frames: this.anims.generateFrameNumbers('player', { start: 4, end: 9 }), 
+      key: 'idle_down',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 0, 1, 2, 3, 4, 5, 6, 7 ] }),
       frameRate: this.frameRate,
-      repeat: -1
-    })
-    this.anims.create({
-      key: 'idle-up',
-      frames: this.anims.generateFrameNumbers('player', { start: 10, end: 15 }), 
-      frameRate: this.frameRate,
-      repeat: -1
-    })
-    this.anims.create({
-      key: 'idle-left',
-      frames: this.anims.generateFrameNumbers('player', { start: 16, end: 21 }), 
-      frameRate: this.frameRate,
-      repeat: -1
-    })
-    this.anims.create({
-      key: 'idle-down',
-      frames: this.anims.generateFrameNumbers('player', { start: 22, end: 27 }), 
-      frameRate: this.frameRate,
-      repeat: -1
-    })
-
-    // Walk
-    this.anims.create({
-      key: 'walk-right',
-      frames: this.anims.generateFrameNumbers('player', { start: 28, end: 33 }), 
-      frameRate: this.frameRate,
-      repeat: -1
-    })
-    this.anims.create({
-      key: 'walk-up',
-      frames: this.anims.generateFrameNumbers('player', { start: 34, end: 39 }), 
-      frameRate: this.frameRate,
-      repeat: -1
-    })
-    this.anims.create({
-      key: 'walk-left',
-      frames: this.anims.generateFrameNumbers('player', { start: 40, end: 45 }), 
-      frameRate: this.frameRate,
-      repeat: -1
-    })
-    this.anims.create({
-      key: 'walk-down',
-      frames: this.anims.generateFrameNumbers('player', { start: 46, end: 51 }), 
-      frameRate: this.frameRate,
-      repeat: -1
-    })
-
-    // Sit
-    this.anims.create({
-      key: 'sit-right',
-      frames: this.anims.generateFrameNumbers('player', { start: 52, end: 57 }),
-      frameRate: this.frameRate,
-      repeat: -1
+      repeat: -1,
     });
     this.anims.create({
-      key: 'sit-left',
-      frames: this.anims.generateFrameNumbers('player', { start: 58, end: 63 }),
+      key: 'idle_up',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 8, 9, 10, 11, 12, 13, 14, 15 ] }),
       frameRate: this.frameRate,
-      repeat: -1
+      repeat: -1,
+    });
+    this.anims.create({
+      key: 'idle_left',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 16, 17, 18, 19, 20, 21, 22, 23 ] }),
+      frameRate: this.frameRate,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: 'idle_right',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 24, 25, 26, 27, 28, 29, 30, 31 ] }),
+      frameRate: this.frameRate,
+      repeat: -1,
     });
 
-    // Phone
+    // Andando
     this.anims.create({
-      key: 'phone',
-      frames: this.anims.generateFrameNumbers('player', { start: 64, end: 75 }),
+      key: 'walk_down',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 32, 33, 34, 35, 36, 37, 38, 39 ] }),
       frameRate: this.frameRate,
-      repeat: -1
-    });
-  
-    // Book
-    this.anims.create({
-      key: 'book',
-      frames: this.anims.generateFrameNumbers('player', { start: 76,end:87 }),
-      frameRate: this.frameRate,
-      repeat: -1
-     });
-  
-    // Cath
-    this.anims.create({
-      key: 'catch-right',
-      frames: this.anims.generateFrameNumbers('player', { start: 88, end: 99 }),
-      frameRate: this.frameRate,
-      repeat: -1
+      repeat: -1,
     });
     this.anims.create({
-      key: 'catch-up',
-      frames: this.anims.generateFrameNumbers('player', { start: 100, end: 111 }),
+      key: 'walk_up',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 40, 41, 42, 43, 44, 45, 46, 47 ] }),
       frameRate: this.frameRate,
-      repeat: -1
+      repeat: -1,
     });
     this.anims.create({
-      key: 'catch-left',
-      frames: this.anims.generateFrameNumbers('player', { start: 112, end: 123 }),
+      key: 'walk_right',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 48, 49, 50, 51, 52, 53, 54, 55 ] }),
       frameRate: this.frameRate,
-      repeat: -1
+      repeat: -1,
     });
     this.anims.create({
-      key: 'catch-down',
-      frames: this.anims.generateFrameNumbers('player', { start: 124, end: 135 }),
+      key: 'walk_left',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 56, 57, 58, 59, 60, 61, 62, 63 ] }),
       frameRate: this.frameRate,
-      repeat: -1
+      repeat: -1,
+    });
+
+    // Correndo
+    this.anims.create({
+      key: 'run_down',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 64, 65, 66, 67, 68, 69, 70, 71 ] }),
+      frameRate: 8,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: 'run_up',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 72, 73, 74, 75, 76, 77, 78, 79 ] }),
+      frameRate: 8,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: 'run_right',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 80, 81, 82, 83, 84, 85, 86, 87 ] }),
+      frameRate: 8,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: 'run_left',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 88, 89, 90, 91, 92, 93, 94, 95 ] }),
+      frameRate: 8,
+      repeat: -1,
+    });
+
+    // Cavando
+    this.anims.create({
+      key: 'tilling_down',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 96, 97, 98, 99, 100, 101, 102, 103 ] }),
+      frameRate: 8,
+    });
+    this.anims.create({
+      key: 'tilling_up',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 104, 105, 106, 107, 108, 109, 110, 111 ] }),
+      frameRate: 8,
+    });
+    this.anims.create({
+      key: 'tilling_left',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 112, 113, 114, 115, 116, 117, 118, 119 ] }),
+      frameRate: 8,
+    });
+    this.anims.create({
+      key: 'tilling_right',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 120, 121, 122, 123, 124, 125, 126, 127 ] }),
+      frameRate: 8,
     });
     
-    // Gift
+    // Cortando
     this.anims.create({
-      key: 'gift-right',
-      frames: this.anims.generateFrameNumbers('player', { start: 136, end: 145 }),
-      frameRate: this.frameRate,
-      repeat: -1
+      key: 'chopping_down',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 128, 129, 130, 131, 132, 133, 134, 135 ] }),
+      frameRate: 8,
     });
     this.anims.create({
-      key: 'gift-up',
-      frames: this.anims.generateFrameNumbers('player', { start: 146, end: 155 }),
-      frameRate: this.frameRate,
-      repeat: -1
+      key: 'chopping_up',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 136, 137, 138, 139, 140, 141, 142, 143 ] }),
+      frameRate: 8,
     });
     this.anims.create({
-      key: 'gift-left',
-      frames: this.anims.generateFrameNumbers('player', { start: 156, end: 165 }),
-      frameRate: this.frameRate,
-      repeat: -1
+      key: 'chopping_left',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 144, 145, 146, 147, 148, 149, 150, 151 ] }),
+      frameRate: 8,
     });
     this.anims.create({
-      key: 'gift-down',
-      frames: this.anims.generateFrameNumbers('player', { start: 166, end: 175 }),
-      frameRate: this.frameRate,
-      repeat: -1
+      key: 'chopping_right',
+      frames: this.anims.generateFrameNumbers('player', { frames: [ 152, 153, 154, 155, 156, 157, 158, 159 ] }),
+      frameRate: 8,
+    });
+    
+    // Regando
+    this.anims.create({
+        key: 'watering_down',
+        frames: this.anims.generateFrameNumbers('player', { frames: [ 160, 161, 162, 163, 164, 165, 166, 167 ] }),
+        frameRate: 8,
+    });
+    this.anims.create({
+        key: 'watering_up',
+        frames: this.anims.generateFrameNumbers('player', { frames: [ 168, 169, 170, 171, 172, 173, 174, 175 ] }),
+        frameRate: 8,
+    });
+    this.anims.create({
+        key: 'watering_left',
+        frames: this.anims.generateFrameNumbers('player', { frames: [ 176, 177, 178, 179, 180, 181, 182, 183 ] }),
+        frameRate: 8,
+    });
+    this.anims.create({
+        key: 'watering_right',
+        frames: this.anims.generateFrameNumbers('player', { frames: [ 184, 185, 186, 187, 188, 189, 190, 191 ] }),
+        frameRate: 8,
     });
 
-    // Punch
+    // Arvore normal
     this.anims.create({
-      key: 'punch-right',
-      frames: this.anims.generateFrameNumbers('player', { start: 176, end: 181 }),
-      frameRate: this.frameRate,
-      repeat: -1
+        key: 'normal_tree_static',
+        frames: this.anims.generateFrameNumbers('arvore_normal', { frames: [ 0 ] }),
+        frameRate: 1,
     });
     this.anims.create({
-      key: 'punch-up',
-      frames: this.anims.generateFrameNumbers('player', { start: 182, end: 187 }),
-      frameRate: this.frameRate,
-      repeat: -1
+        key: 'normal_tree_moving',
+        frames: this.anims.generateFrameNumbers('arvore_normal', { frames: [ 12, 13, 14, 15 ] }),
+        frameRate: 4,
+        repeat: -1,
     });
     this.anims.create({
-      key: 'punch-left',
-      frames: this.anims.generateFrameNumbers('player', { start: 188, end: 193 }),
-      frameRate: this.frameRate,
-      repeat: -1
+        key: 'normal_tree_chopped',
+        frames: this.anims.generateFrameNumbers('arvore_normal', { frames: [ 24, 25, 26, 27, 28, 29 ] }),
+        frameRate: 6,
     });
     this.anims.create({
-      key: 'punch-down',
-      frames: this.anims.generateFrameNumbers('player', { start: 194, end: 199 }),
-      frameRate: this.frameRate,
-      repeat: -1
+        key: 'normal_tree_chopped_heavily',
+        frames: this.anims.generateFrameNumbers('arvore_normal', { frames: [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ] }),
+        frameRate: 12,
     });
-    
-    // Gun
+
+    // Arvore pessego
     this.anims.create({
-      key: 'gun-right',
-      frames: this.anims.generateFrameNumbers('player', { start: 200, end: 203 }),
-      frameRate: this.frameRate,
-      repeat: -1
+        key: 'peach_tree_static',
+        frames: this.anims.generateFrameNumbers('arvore_pessego', { frames: [ 0 ] }),
+        frameRate: 1,
     });
     this.anims.create({
-      key: 'gun-up',
-      frames: this.anims.generateFrameNumbers('player', { start: 204, end: 207 }),
-      frameRate: this.frameRate,
-      repeat: -1
+        key: 'peach_tree_moving',
+        frames: this.anims.generateFrameNumbers('arvore_pessego', { frames: [ 12, 13, 14, 15 ] }),
+        frameRate: 4,
+        repeat: -1,
     });
     this.anims.create({
-      key: 'gun-left',
-      frames: this.anims.generateFrameNumbers('player', {start: 208, end: 211 }),
-      frameRate: this.frameRate,
-      repeat: -1
+        key: 'peach_tree_chopped',
+        frames: this.anims.generateFrameNumbers('arvore_pessego', { frames: [ 24, 25, 26, 27, 28, 29 ] }),
+        frameRate: 6,
     });
     this.anims.create({
-      key: 'gun-down',
-      frames: this.anims.generateFrameNumbers('player', {start: 212, end: 215 }),
-      frameRate: this.frameRate,
-      repeat: -1
-    });
-    
-    // Damage
-    this.anims.create({
-      key: 'fire-right',
-      frames: this.anims.generateFrameNumbers('player', {start: 228, end: 230 }),
-      frameRate: this.frameRate,
-      repeat: -1
+        key: 'peach_tree_chopped_heavily',
+        frames: this.anims.generateFrameNumbers('arvore_pessego', { frames: [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ] }),
+        frameRate: 12,
     });
     this.anims.create({
-      key: 'fire-up', 
-      frames: this.anims.generateFrameNumbers('player', { start: 231, end: 233 }),
-      frameRate: this.frameRate,
-      repeat: -1
+        key: 'peach_tree_moving_no_fruits',
+        frames: this.anims.generateFrameNumbers('arvore_pessego', { frames: [ 48, 49 ] }),
+        frameRate: 2,
+        repeat: -1,
+    });
+
+    // Arvore maça
+    this.anims.create({
+        key: 'apple_tree_static',
+        frames: this.anims.generateFrameNumbers('arvore_maca', { frames: [ 0 ] }),
+        frameRate: 1,
     });
     this.anims.create({
-      key: 'fire-left',
-      frames: this.anims.generateFrameNumbers('player', { start: 234, end: 236 }),
-      frameRate: this.frameRate,
-      repeat: -1
+        key: 'apple_tree_moving',
+        frames: this.anims.generateFrameNumbers('arvore_maca', { frames: [ 12, 13, 14, 15 ] }),
+        frameRate: 4,
+        repeat: -1,
+    });
+    this.anims.create({
+        key: 'apple_tree_chopped',
+        frames: this.anims.generateFrameNumbers('arvore_maca', { frames: [ 24, 25, 26, 27, 28, 29 ] }),
+        frameRate: 6,
+    });
+    this.anims.create({
+        key: 'apple_tree_chopped_heavily',
+        frames: this.anims.generateFrameNumbers('arvore_maca', { frames: [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ] }),
+        frameRate: 12,
+    });
+    this.anims.create({
+        key: 'apple_tree_moving_no_fruits',
+        frames: this.anims.generateFrameNumbers('arvore_maca', { frames: [ 48, 49 ] }),
+        frameRate: 2,
+        repeat: -1,
+    });
+
+    // Aarvore pera
+    this.anims.create({
+        key: 'pear_tree_static',
+        frames: this.anims.generateFrameNumbers('arvore_pera', { frames: [ 0 ] }),
+        frameRate: 1,
+    });
+    this.anims.create({
+        key: 'pear_tree_moving',
+        frames: this.anims.generateFrameNumbers('arvore_pera', { frames: [ 12, 13, 14, 15 ] }),
+        frameRate: 4,
+        repeat: -1,
+    });
+    this.anims.create({
+        key: 'pear_tree_chopped',
+        frames: this.anims.generateFrameNumbers('arvore_pera', { frames: [ 24, 25, 26, 27, 28, 29 ] }),
+        frameRate: 6,
+    });
+    this.anims.create({
+        key: 'pear_tree_chopped_heavily',
+        frames: this.anims.generateFrameNumbers('arvore_pera', { frames: [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ] }),
+        frameRate: 12,
+    });
+    this.anims.create({
+        key: 'pear_tree_moving_no_fruits',
+        frames: this.anims.generateFrameNumbers('arvore_pera', { frames: [ 48, 49 ] }),
+        frameRate: 2,
+        repeat: -1,
+    });
+
+    // Arvore laranja
+    this.anims.create({
+        key: 'orange_tree_static',
+        frames: this.anims.generateFrameNumbers('arvore_laranja', { frames: [ 0 ] }),
+        frameRate: 1,
+    });
+    this.anims.create({
+        key: 'orange_tree_moving',
+        frames: this.anims.generateFrameNumbers('arvore_laranja', { frames: [ 12, 13, 14, 15 ] }),
+        frameRate: 4,
+        repeat: -1,
+    });
+    this.anims.create({
+        key: 'orange_tree_chopped',
+        frames: this.anims.generateFrameNumbers('arvore_laranja', { frames: [ 24, 25, 26, 27, 28, 29 ] }),
+        frameRate: 6,
+    });
+    this.anims.create({
+        key: 'orange_tree_chopped_heavily',
+        frames: this.anims.generateFrameNumbers('arvore_laranja', { frames: [ 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47 ] }),
+        frameRate: 12,
+    });
+    this.anims.create({
+        key: 'orange_tree_moving_no_fruits',
+        frames: this.anims.generateFrameNumbers('arvore_laranja', { frames: [ 48, 49 ] }),
+        frameRate: 2,
+        repeat: -1,
     });
     // this.anims.create({
     //   key: 'fire-down',

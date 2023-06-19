@@ -4,7 +4,8 @@
     ],
     "fileStates": {
         "": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1.5
         },
         "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/loja.tmx": {
             "scale": 2.0235,
@@ -30,8 +31,8 @@
             "scale": 1.580859375,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 75.27551272547566,
-                "y": 254.29206819866567
+                "x": 134.10427477143566,
+                "y": 409.2710649864097
             }
         },
         "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/sala.tmx#tiles_lixeiras": {
@@ -46,10 +47,10 @@
                 9
             ],
             "scale": 1.8208333333333333,
-            "selectedLayer": 0,
+            "selectedLayer": 4,
             "viewCenter": {
-                "x": 260.8695652173913,
-                "y": 180.68649885583525
+                "x": 258.94736842105266,
+                "y": 168.8787185354691
             }
         },
         "fazenda.tmx#agua1_anim": {
@@ -62,11 +63,14 @@
         }
     },
     "last.exportedFilePath": "C:/Users/carlo/OneDrive/Área de Trabalho/new-time-farm-2/public/mapas",
+    "lastUsedTilesetExportFilter": "Todos os Ficheiros (*)",
+    "map.lastUsedExportFilter": "Todos os Ficheiros (*)",
     "openFiles": [
         "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/sala.tmx",
         "fazenda.tmx"
     ],
     "project": "fazenda.tiled-project",
+    "property.type": "string",
     "recentFiles": [
         "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/sala.tmx",
         "fazenda.tmx",
