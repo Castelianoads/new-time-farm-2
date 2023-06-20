@@ -21,7 +21,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
   init(){
     this.setFrame(3)
 
-    this.speed = 120;
+    this.speed = 100;
     this.frameRate = 8;
     this.direction = 'down';
     this.cursors = this.scene.input.keyboard.createCursorKeys()

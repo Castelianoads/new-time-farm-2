@@ -108,17 +108,19 @@ export default class Lab extends Scene {
 
     for (let i = 0; i < layersNames.length; i++) {
       const name = layersNames[i];
-      console.log(name);
       if(name == 'abaixo agua collision'){
         this.layers[name] = this.map.createLayer(name, [tilesOffice2], 0, 0)
+        this.layers[name].setDepth(i);
+        console.log(name, this.layers[name].depth);
+        
       } else{
         this.layers[name] = this.map.createLayer(name, [tilesOffice], 0, 0)
+        this.layers[name].setDepth(i);
+        console.log(name, this.layers[name].depth);
       }
       // Define a profundidade de cada camada (Layer)
-      console.log(this.layers[name]);
-      this.layers[name].setDepth(i);
 
-      if(name.endsWith('collision')){
+      if(name.endsWith('Collision')){
         this.layers[name].setCollisionByProperty({ collide: true })
         this.layers[name].setTileIndexCallback(0, this, (sprite, tile) => {
             console.log(`collided with ${tile.properties.object}, ${sprite}`);
@@ -171,7 +173,7 @@ export default class Lab extends Scene {
   createPlayer(){
     this.touch = new Touch(this, 16 * 8, 16 * 5);
     this.player = new Player(this, 18 * 8, 20 * 5, this.touch);
-    this.player.setDepth(1);        
+    this.player.setDepth(5);        
   }
 
   createColliders(){
@@ -179,7 +181,7 @@ export default class Lab extends Scene {
     for (let i = 0; i < layersNames.length; i++) {
       const name = layersNames[i];
       
-      if(name.endsWith('collision')){
+      if(name.endsWith('Collision')){
         this.physics.add.collider(this.player, this.layers[name], this.Collided(), null, this)
       }
     }
