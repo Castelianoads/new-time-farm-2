@@ -31,8 +31,8 @@
             "scale": 1.580859375,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 73.3778107239931,
-                "y": 253.02693353101066
+                "x": 143.59278477884854,
+                "y": 255.55720286632075
             }
         },
         "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/sala.tmx#tiles_lixeiras": {
@@ -47,10 +47,10 @@
                 9
             ],
             "scale": 1.5,
-            "selectedLayer": 6,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 270,
-                "y": 157.99999999999997
+                "x": 268.66666666666663,
+                "y": 156.66666666666663
             }
         },
         "fazenda.tmx#agua1_anim": {
@@ -71,7 +71,7 @@
         "fazenda.tmx"
     ],
     "project": "fazenda.tiled-project",
-    "property.type": "bool",
+    "property.type": "string",
     "recentFiles": [
         "C:/Users/carlo/OneDrive/Documentos/ADS/5_periodo/Introdução a Jogos Digitais/Projetos/mapa/public/mapas/sala.tmx",
         "fazenda.tmx",

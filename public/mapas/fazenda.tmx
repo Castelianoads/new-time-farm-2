@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="30" height="25" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="5">
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="30" height="25" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="9">
  <editorsettings>
   <export target="fazenda.json" format="json"/>
  </editorsettings>
@@ -8,13 +8,13 @@
   <tile id="162">
    <properties>
     <property name="collide" type="bool" value="true"/>
-    <property name="name" value="banca"/>
+    <property name="name" value="loja"/>
    </properties>
   </tile>
   <tile id="163">
    <properties>
     <property name="collide" type="bool" value="true"/>
-    <property name="name" value="banca"/>
+    <property name="name" value="loja"/>
    </properties>
   </tile>
   <tile id="164">
@@ -32,13 +32,13 @@
   <tile id="186">
    <properties>
     <property name="collide" type="bool" value="true"/>
-    <property name="name" value="banca"/>
+    <property name="name" value="loja"/>
    </properties>
   </tile>
   <tile id="187">
    <properties>
     <property name="collide" type="bool" value="true"/>
-    <property name="name" value="banca"/>
+    <property name="name" value="loja"/>
    </properties>
   </tile>
   <tile id="188">
@@ -51,6 +51,22 @@
    <properties>
     <property name="collide" type="bool" value="true"/>
     <property name="name" value="poço"/>
+   </properties>
+  </tile>
+  <tile id="201">
+   <properties>
+    <property name="name" value="casa"/>
+   </properties>
+  </tile>
+  <tile id="202">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+    <property name="name" value="casa"/>
+   </properties>
+  </tile>
+  <tile id="203">
+   <properties>
+    <property name="name" value="casa"/>
    </properties>
   </tile>
   <tile id="204">
@@ -86,6 +102,21 @@
     <property name="name" value="caixa"/>
    </properties>
   </tile>
+  <tile id="225">
+   <properties>
+    <property name="name" value="casa"/>
+   </properties>
+  </tile>
+  <tile id="226">
+   <properties>
+    <property name="name" value="casa"/>
+   </properties>
+  </tile>
+  <tile id="227">
+   <properties>
+    <property name="name" value="casa"/>
+   </properties>
+  </tile>
   <tile id="228">
    <properties>
     <property name="collide" type="bool" value="false"/>
@@ -119,6 +150,21 @@
     <property name="name" value="caixa"/>
    </properties>
   </tile>
+  <tile id="249">
+   <properties>
+    <property name="name" value="casa"/>
+   </properties>
+  </tile>
+  <tile id="250">
+   <properties>
+    <property name="name" value="casa"/>
+   </properties>
+  </tile>
+  <tile id="251">
+   <properties>
+    <property name="name" value="casa"/>
+   </properties>
+  </tile>
   <tile id="252">
    <properties>
     <property name="collide" type="bool" value="false"/>
@@ -144,6 +190,24 @@
    <properties>
     <property name="collide" type="bool" value="true"/>
     <property name="name" value="feno"/>
+   </properties>
+  </tile>
+  <tile id="273">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+    <property name="name" value="casa"/>
+   </properties>
+  </tile>
+  <tile id="274">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+    <property name="name" value="casa"/>
+   </properties>
+  </tile>
+  <tile id="275">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+    <property name="name" value="casa"/>
    </properties>
   </tile>
   <tile id="276">
@@ -183,6 +247,12 @@
    <properties>
     <property name="collide" type="bool" value="true"/>
     <property name="name" value="bebedouro"/>
+   </properties>
+  </tile>
+  <tile id="298">
+   <properties>
+    <property name="collide" type="bool" value="true"/>
+    <property name="name" value="casa"/>
    </properties>
   </tile>
   <tile id="300">
@@ -751,9 +821,9 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,4,0,4,0,0,0,806,0,0,29,0,805,0,0,4,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,280,0,0,0,0,0,0,805,0,0,0,0,0,0,0,0,0,
-0,0,0,280,0,805,0,0,0,806,0,281,0,0,0,0,0,0,0,0,4,0,0,4,0,0,805,0,0,0,
-0,0,0,0,0,0,0,0,0,0,4,4,4,0,0,808,0,0,0,0,4,0,0,0,29,0,0,0,0,0,
-0,0,0,0,0,0,808,0,0,0,0,0,0,0,280,0,0,0,29,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,280,0,805,0,0,0,806,0,281,0,0,0,0,0,0,0,0,4,0,0,4,0,433,805,0,0,0,
+0,0,0,0,0,0,0,0,0,0,4,4,4,0,0,808,0,0,0,0,4,0,0,0,29,457,0,0,0,0,
+0,0,0,0,0,0,808,0,0,0,0,0,0,0,280,0,0,0,29,0,0,0,0,0,0,481,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,29,0,0,0,0,0,
 0,0,84,85,85,85,85,85,85,85,85,85,85,86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,108,109,109,109,109,109,109,109,109,109,109,110,0,0,0,0,0,29,0,0,0,0,0,0,0,0,0,0,
@@ -779,7 +849,7 @@
 0,0,361,1610613028,0,0,0,0,0,0,0,0,0,0,0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,361,0,0,0,0,0,274,275,203,299,275,203,276,0,
 0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,361,256,257,0,0,0,292,293,0,0,0,0,0,0,361,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -801,22 +871,22 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,613,0,0,0,0,0,0,0,0,0,0,0,
 0,0,616,617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,205,206,206,206,206,207,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,229,230,230,230,230,231,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,229,230,230,230,230,231,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,229,230,230,230,230,231,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,253,254,254,254,254,255,0,
-0,0,616,617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,277,278,278,278,278,279,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,277,278,278,278,278,279,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,277,278,278,278,278,279,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,301,302,302,302,302,303,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,163,164,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,187,188,0,0,
-0,0,0,0,0,0,0,0,0,0,0,616,617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-0,616,617,0,0,0,0,0,0,0,0,0,0,0,0,0,620,621,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,205,206,206,206,206,206,207,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,229,230,230,230,230,230,231,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,229,230,230,230,230,230,231,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,253,254,254,254,254,254,255,0,
+0,0,616,617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,277,278,278,278,278,278,279,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,277,278,278,278,278,278,279,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,301,302,302,302,302,302,303,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,490,490,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,490,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,616,617,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2684354747,2684354723,0,
+0,616,617,0,0,0,0,0,0,0,0,0,0,0,0,0,620,621,0,0,0,0,0,0,0,0,0,2684354748,2684354724,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,165,166,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,189,190,0,0,
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,235,0,0,
 0,616,617,0,0,208,0,0,0,0,0,208,0,498,0,495,0,569,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,616,617,0,0,616,617,616,617,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -868,6 +938,7 @@
     <property name="nome" value="tomate"/>
    </properties>
   </object>
-  <object id="4" name="loja" x="416.559" y="233.489" width="30.4974" height="20.43"/>
+  <object id="4" name="loja" x="433.682" y="256.844" width="20.4974" height="30.0822"/>
+  <object id="8" name="casa" x="401.5" y="190" width="13.625" height="18.375"/>
  </objectgroup>
 </map>
