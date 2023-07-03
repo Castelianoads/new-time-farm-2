@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="30" height="25" tilewidth="16" tileheight="16" infinite="0" nextlayerid="11" nextobjectid="9">
+<map version="1.10" tiledversion="1.10.1" orientation="orthogonal" renderorder="right-down" width="30" height="25" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="89">
  <editorsettings>
   <export target="fazenda.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="geral" tilewidth="16" tileheight="16" tilecount="960" columns="24">
   <image source="tiles/geral.png" width="384" height="640"/>
+  <tile id="108">
+   <properties>
+    <property name="name" value="terra"/>
+   </properties>
+  </tile>
   <tile id="162">
    <properties>
     <property name="collide" type="bool" value="true"/>
@@ -748,6 +753,35 @@
    </properties>
   </tile>
  </tileset>
+ <layer id="12" name="Abaixo" width="30" height="25">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
  <layer id="3" name="Abaixo agua Collision" width="30" height="25">
   <data encoding="csv">
 961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,961,
@@ -940,5 +974,156 @@
   </object>
   <object id="4" name="loja" x="433.682" y="256.844" width="20.4974" height="30.0822"/>
   <object id="8" name="casa" x="401.5" y="190" width="13.625" height="18.375"/>
+  <object id="9" name="terra" x="51.5" y="291.5" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="tomate"/>
+   </properties>
+  </object>
+  <object id="38" name="terra" x="67.7443" y="291.642" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="tomate"/>
+   </properties>
+  </object>
+  <object id="39" name="terra" x="83.6534" y="291.369" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="tomate"/>
+   </properties>
+  </object>
+  <object id="40" name="terra" x="99.5313" y="291.528" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="tomate"/>
+   </properties>
+  </object>
+  <object id="41" name="terra" x="115.688" y="291.028" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="tomate"/>
+   </properties>
+  </object>
+  <object id="42" name="terra" x="131.938" y="291.153" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="tomate"/>
+   </properties>
+  </object>
+  <object id="43" name="terra" x="147.563" y="291.028" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="tomate"/>
+   </properties>
+  </object>
+  <object id="44" name="terra" x="163.938" y="290.778" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="tomate"/>
+   </properties>
+  </object>
+  <object id="45" name="terra" x="180.563" y="290.778" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="tomate"/>
+   </properties>
+  </object>
+  <object id="46" name="terra" x="195.438" y="290.653" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="tomate"/>
+   </properties>
+  </object>
+  <object id="68" name="terra" x="51.7753" y="306.904" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="milho"/>
+   </properties>
+  </object>
+  <object id="69" name="terra" x="68.0196" y="307.046" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="milho"/>
+   </properties>
+  </object>
+  <object id="70" name="terra" x="83.9287" y="306.773" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="milho"/>
+   </properties>
+  </object>
+  <object id="71" name="terra" x="99.8066" y="306.932" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="milho"/>
+   </properties>
+  </object>
+  <object id="72" name="terra" x="115.963" y="306.432" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="milho"/>
+   </properties>
+  </object>
+  <object id="73" name="terra" x="132.213" y="306.557" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="milho"/>
+   </properties>
+  </object>
+  <object id="74" name="terra" x="147.838" y="306.432" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="milho"/>
+   </properties>
+  </object>
+  <object id="75" name="terra" x="164.213" y="306.182" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="milho"/>
+   </properties>
+  </object>
+  <object id="76" name="terra" x="180.838" y="306.182" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="milho"/>
+   </properties>
+  </object>
+  <object id="77" name="terra" x="195.713" y="306.057" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="milho"/>
+   </properties>
+  </object>
+  <object id="78" name="terra" x="51.9571" y="323.085" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="morango"/>
+   </properties>
+  </object>
+  <object id="79" name="terra" x="68.2014" y="323.227" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="morango"/>
+   </properties>
+  </object>
+  <object id="80" name="terra" x="84.1105" y="322.954" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="morango"/>
+   </properties>
+  </object>
+  <object id="81" name="terra" x="99.9884" y="323.113" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="morango"/>
+   </properties>
+  </object>
+  <object id="82" name="terra" x="116.145" y="322.613" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="morango"/>
+   </properties>
+  </object>
+  <object id="83" name="terra" x="132.395" y="322.738" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="morango"/>
+   </properties>
+  </object>
+  <object id="84" name="terra" x="148.02" y="322.613" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="morango"/>
+   </properties>
+  </object>
+  <object id="85" name="terra" x="164.395" y="322.363" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="morango"/>
+   </properties>
+  </object>
+  <object id="86" name="terra" x="181.02" y="322.363" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="morango"/>
+   </properties>
+  </object>
+  <object id="87" name="terra" x="195.895" y="322.238" width="8.875" height="9.44318">
+   <properties>
+    <property name="tipo" value="morango"/>
+   </properties>
+  </object>
+  <object id="88" name="pasto" x="40.6818" y="58.7727" width="219.818" height="202.727"/>
  </objectgroup>
 </map>

@@ -12,6 +12,6 @@ export default class Touch extends Phaser.Physics.Arcade.Sprite{
   }
 
   init(){
-    this.body.setSize(CONFIG.TILE_SIZE / 2, CONFIG.TILE_SIZE / 2)
+    this.body.setSize(CONFIG.TILE_SIZE / 3, CONFIG.TILE_SIZE / 3)
   }
 }

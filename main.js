@@ -1,14 +1,15 @@
 
 import { AUTO } from "phaser";
 import { CONFIG } from "./src/config";
-import Lab from "./src/scenes/Lab";
+import Farm from "./src/scenes/Farm";
+import Home from "./src/scenes/Home";
 
 
 const config = {
   with: CONFIG.GAME_WIDTH,
   height: CONFIG.GAME_HEIGHT,
   type: AUTO,
-  scene: [Lab],
+  scene: [Farm, Home],
   physics: {
     default: 'arcade',
     arcade: {

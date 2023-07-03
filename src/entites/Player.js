@@ -102,6 +102,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
     this.touch.setPosition(this.x + tX + CONFIG.TILE_SIZE / 2, this.y + tY)
   }
 
+  
+
   initAnimations(){
     
     // Parado

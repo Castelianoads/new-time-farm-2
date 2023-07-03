@@ -311,15 +311,15 @@
                  "y":335.962
                 }, 
                 {
-                 "height":30.0821739130434,
+                 "height":30.0822,
                  "id":4,
                  "name":"loja",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":20.4974,
-                 "x":433.682188405797,
-                 "y":256.844072463768
+                 "x":433.682,
+                 "y":256.844
                 }, 
                 {
                  "height":18.375,
@@ -331,6 +331,528 @@
                  "width":13.625,
                  "x":401.5,
                  "y":190
+                }, 
+                {
+                 "height":9.44318,
+                 "id":9,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"tomate"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":51.5,
+                 "y":291.5
+                }, 
+                {
+                 "height":9.44318,
+                 "id":38,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"tomate"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":67.7443,
+                 "y":291.642
+                }, 
+                {
+                 "height":9.44318,
+                 "id":39,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"tomate"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":83.6534,
+                 "y":291.369
+                }, 
+                {
+                 "height":9.44318,
+                 "id":40,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"tomate"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":99.5313,
+                 "y":291.528
+                }, 
+                {
+                 "height":9.44318,
+                 "id":41,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"tomate"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":115.688,
+                 "y":291.028
+                }, 
+                {
+                 "height":9.44318,
+                 "id":42,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"tomate"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":131.938,
+                 "y":291.153
+                }, 
+                {
+                 "height":9.44318,
+                 "id":43,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"tomate"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":147.563,
+                 "y":291.028
+                }, 
+                {
+                 "height":9.44318,
+                 "id":44,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"tomate"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":163.938,
+                 "y":290.778
+                }, 
+                {
+                 "height":9.44318,
+                 "id":45,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"tomate"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":180.563,
+                 "y":290.778
+                }, 
+                {
+                 "height":9.44318,
+                 "id":46,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"tomate"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":195.438,
+                 "y":290.653
+                }, 
+                {
+                 "height":9.44318,
+                 "id":68,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"milho"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":51.7753,
+                 "y":306.904
+                }, 
+                {
+                 "height":9.44318,
+                 "id":69,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"milho"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":68.0196,
+                 "y":307.046
+                }, 
+                {
+                 "height":9.44318,
+                 "id":70,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"milho"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":83.9287,
+                 "y":306.773
+                }, 
+                {
+                 "height":9.44318,
+                 "id":71,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"milho"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":99.8066,
+                 "y":306.932
+                }, 
+                {
+                 "height":9.44318,
+                 "id":72,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"milho"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":115.963,
+                 "y":306.432
+                }, 
+                {
+                 "height":9.44318,
+                 "id":73,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"milho"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":132.213,
+                 "y":306.557
+                }, 
+                {
+                 "height":9.44318,
+                 "id":74,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"milho"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":147.838,
+                 "y":306.432
+                }, 
+                {
+                 "height":9.44318,
+                 "id":75,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"milho"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":164.213,
+                 "y":306.182
+                }, 
+                {
+                 "height":9.44318,
+                 "id":76,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"milho"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":180.838,
+                 "y":306.182
+                }, 
+                {
+                 "height":9.44318,
+                 "id":77,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"milho"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":195.713,
+                 "y":306.057
+                }, 
+                {
+                 "height":9.44318,
+                 "id":78,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"morango"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":51.9571,
+                 "y":323.085
+                }, 
+                {
+                 "height":9.44318,
+                 "id":79,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"morango"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":68.2014,
+                 "y":323.227
+                }, 
+                {
+                 "height":9.44318,
+                 "id":80,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"morango"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":84.1105,
+                 "y":322.954
+                }, 
+                {
+                 "height":9.44318,
+                 "id":81,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"morango"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":99.9884,
+                 "y":323.113
+                }, 
+                {
+                 "height":9.44318,
+                 "id":82,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"morango"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":116.145,
+                 "y":322.613
+                },
+            
+                {
+                 "height":9.44318,
+                 "id":83,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"morango"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":132.395,
+                 "y":322.738
+                }, 
+                {
+                 "height":9.44318,
+                 "id":84,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"morango"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":148.02,
+                 "y":322.613
+                }, 
+                {
+                 "height":9.44318,
+                 "id":85,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"morango"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":164.395,
+                 "y":322.363
+                }, 
+                {
+                 "height":9.44318,
+                 "id":86,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"morango"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":181.02,
+                 "y":322.363
+                }, 
+                {
+                 "height":9.44318,
+                 "id":87,
+                 "name":"terra",
+                 "properties":[
+                        {
+                         "name":"tipo",
+                         "type":"string",
+                         "value":"morango"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":8.875,
+                 "x":195.895,
+                 "y":322.238
+                }, 
+                {
+                 "height":202.727272727273,
+                 "id":88,
+                 "name":"pasto",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":219.818181818182,
+                 "x":40.6818181818182,
+                 "y":58.7727272727273
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -339,7 +861,7 @@
          "y":0
         }],
  "nextlayerid":13,
- "nextobjectid":9,
+ "nextobjectid":89,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.1",
@@ -357,6 +879,15 @@
          "tilecount":960,
          "tileheight":16,
          "tiles":[
+                {
+                 "id":108,
+                 "properties":[
+                        {
+                         "name":"name",
+                         "type":"string",
+                         "value":"terra"
+                        }]
+                }, 
                 {
                  "id":162,
                  "properties":[
@@ -692,7 +1223,8 @@
                          "type":"string",
                          "value":"casa"
                         }]
-                }, 
+                },
+            
                 {
                  "id":252,
                  "properties":[
@@ -701,8 +1233,7 @@
                          "type":"bool",
                          "value":false
                         }]
-                },
-            
+                }, 
                 {
                  "id":253,
                  "properties":[
@@ -1068,7 +1599,8 @@
                          "type":"string",
                          "value":"cerca"
                         }]
-                }, 
+                },
+            
                 {
                  "id":363,
                  "properties":[
@@ -1082,8 +1614,7 @@
                          "type":"string",
                          "value":"cerca"
                         }]
-                },
-            
+                }, 
                 {
                  "id":364,
                  "properties":[
@@ -1489,7 +2020,8 @@
                          "type":"string",
                          "value":"placa"
                         }]
-                }, 
+                },
+            
                 {
                  "id":520,
                  "properties":[
@@ -1503,8 +2035,7 @@
                          "type":"string",
                          "value":"placa"
                         }]
-                },
-            
+                }, 
                 {
                  "id":521,
                  "properties":[
@@ -1910,7 +2441,8 @@
                          "type":"string",
                          "value":"arvore"
                         }]
-                }, 
+                },
+            
                 {
                  "id":616,
                  "properties":[
@@ -1924,8 +2456,7 @@
                          "type":"string",
                          "value":"arvore"
                         }]
-                },
-            
+                }, 
                 {
                  "id":617,
                  "properties":[

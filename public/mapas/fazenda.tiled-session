@@ -31,7 +31,7 @@
             "scale": 1.580859375,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 143.59278477884854,
+                "x": 164.4675067951569,
                 "y": 255.55720286632075
             }
         },
@@ -46,11 +46,11 @@
             "expandedObjectLayers": [
                 9
             ],
-            "scale": 1.5,
-            "selectedLayer": 1,
+            "scale": 3,
+            "selectedLayer": 7,
             "viewCenter": {
-                "x": 268.66666666666663,
-                "y": 156.66666666666663
+                "x": 249.83333333333331,
+                "y": 234.83333333333331
             }
         },
         "fazenda.tmx#agua1_anim": {
