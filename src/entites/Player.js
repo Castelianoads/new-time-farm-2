@@ -7,21 +7,26 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
   touch;
   isAction;
 
+  keyC;
+  KeyV;
+  KeyR;
+
   constructor(scene, x, y, touch){
     super(scene, x, y, 'player')
 
     this.touch = touch
 
-    scene.add.existing(this) // Criando a imagem que o jogador ve
-    scene.physics.add.existing(this) // criando o Body da Fisica
-
+    scene.add.existing(this) 
+    scene.physics.add.existing(this) 
+    
+    this.associateKeyboardInputs(scene)
     this.init()
   }
 
   init(){
     this.setFrame(3)
 
-    this.speed = 100;
+    this.speed = 60;
     this.frameRate = 8;
     this.direction = 'down';
     this.cursors = this.scene.input.keyboard.createCursorKeys()
@@ -33,12 +38,10 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
     this.initAnimations();
 
     this.scene.events.on(Phaser.Scenes.Events.UPDATE, this.update, this)
-
-    // this.play('idle-right');
   }
   
   update(){
-    const { left, right, down, up, space } = this.cursors
+    const { left, right, down, up, space, C } = this.cursors
 
     if(left.isDown) {
       this.direction = 'left';
@@ -65,14 +68,60 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
     } else {
       this.isAction = false;
     }
+
+    if (this.keyX.isDown) {
+      this.disabledMoving = true;
+      if (this.direction == 'up') {
+        this.currentPlayingAnim = 'tilling_up';
+        this.play('tilling_up');        
+      } else if (this.direction === 'down') {
+        this.currentPlayingAnim = 'tilling_down';
+        this.play('tilling_down');
+      } else if (this.direction === 'left') {
+        this.currentPlayingAnim = 'tilling_left';
+        this.play('tilling_left');   
+      } else if (this.direction === 'rigth') {
+        this.currentPlayingAnim = 'tilling_right';
+        this.play('tilling_right');
+      }
+    } else if (this.keyC.isDown) {        
+      this.disabledMoving = true;
+      if (this.direction === 'up') {
+        this.currentPlayingAnim = 'chopping_up';
+        this.play('chopping_up');
+      } else if (this.direction === 'down') {
+        this.currentPlayingAnim = 'chopping_down';
+        this.play('chopping_down');
+      } else if (this.direction === 'left') {
+        this.currentPlayingAnim = 'chopping_left';
+        this.play('chopping_left');
+      } else if (this.direction === 'rigth') {
+        this.currentPlayingAnim = 'chopping_right';
+        this.play('chopping_right');
+      }
+    } else if (this.keyV.isDown) {
+      this.disabledMoving = true;
+      if (this.direction === 'up') {
+        this.currentPlayingAnim = 'watering_up';
+        this.play('watering_up');        
+      } else if (this.direction === 'down') {
+        this.currentPlayingAnim = 'watering_down';
+        this.play('watering_down');        
+      } else if (this.direction === 'left') {
+        this.currentPlayingAnim = 'watering_left';
+        this.play('watering_left');       
+      } else if (this.direction === 'rigth') {
+        this.currentPlayingAnim = 'watering_right';
+        this.play('watering_right');        
+      }
+    }
     
-    if(this.body.velocity.x === 0 && this.body.velocity.y === 0){ // esta parado
+    if(this.body.velocity.x === 0 && this.body.velocity.y === 0){
       this.play('idle_' + this.direction, true)
-    } else { // Em movimento
+    } else { 
       this.play('walk_' + this.direction, true)
     }
 
-    // Fazer o touch seguir o player
     let tX, tY;
     let distance = 16;
     
@@ -102,7 +151,12 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
     this.touch.setPosition(this.x + tX + CONFIG.TILE_SIZE / 2, this.y + tY)
   }
 
-  
+  associateKeyboardInputs(scene)
+  {
+    this.keyX = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.X);
+    this.keyC = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.C);
+    this.keyV = scene.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.V);
+  }
 
   initAnimations(){
     
@@ -387,13 +441,6 @@ export default class Player extends Phaser.Physics.Arcade.Sprite{
         frames: this.anims.generateFrameNumbers('arvore_laranja', { frames: [ 48, 49 ] }),
         frameRate: 2,
         repeat: -1,
-    });
-    // this.anims.create({
-    //   key: 'fire-down',
-    //   frames: this.anims.generateFrameNumbers('player', { start: 238, end: 240 }),
-    //   frameRate: this.frameRate,
-    //   repeat: -1
-    // });
+    });   
   }
-
 }

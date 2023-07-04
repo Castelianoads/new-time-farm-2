@@ -1,6 +1,7 @@
 import { Scene } from "phaser";
 import { CONFIG } from "../config";
 import Player from "../entites/Player";
+import Cow from "../entites/Cow";
 import Touch from "../entites/Touch";
 import Hud from "../component/Hud";
 
@@ -14,6 +15,9 @@ export default class Farm extends Scene {
   touch;
   layers = {};
   cursors;
+  cow1;
+  cow2;
+  cow3;
 
   textDialago = ""
   telaDialago;
@@ -57,8 +61,8 @@ export default class Farm extends Scene {
       frameHeight: 48
     });
     this.load.spritesheet('cow', 'mapas/fazenda/vacas_anim.png', { 
-      frameWidth: 64, 
-      frameHeight: 64 
+      frameWidth: 32, 
+      frameHeight: 32 
     });
 
     this.load.spritesheet('arvore_normal', 'mapas/fazenda/arvore_anim.png', {
@@ -92,7 +96,8 @@ export default class Farm extends Scene {
     this.createColliders();
     this.cursors = this.input.keyboard.createCursorKeys();
     this.hud = new Hud(this, 0, 0);
-    //this.createCows();
+    this.createCows();
+
   }
 
   update(){
@@ -194,22 +199,22 @@ export default class Farm extends Scene {
   }
 
   createCows(){
-    this.cows = this.physics.add.group({
-      key: 'cow',
-      repeat: 5,
-      setXY: { x: 100, y: 100, stepX: 100 }
-    });
+    this.cow1 = new Cow(this, 100, 100);
+    this.cow2 = new Cow(this, 200, 80);
+    this.cow3 = new Cow(this, 150, 160);
+    this.cow1.setDepth(5)
+    this.cow2.setDepth(5)
+    this.cow3.setDepth(5)
 
-    this.anims.create({
-      key: 'walk',
-      frames: this.anims.generateFrameNumbers('cow', { start: 0, end: 7 }),
-      frameRate: 10,
-      repeat: -1
-    });
+    // this.cows = this.physics.add.group({
+    //   key: 'cow',
+    //   repeat: 5,
+    //   setXY: { x: 100, y: 100, stepX: 100 }
+    // });
 
-    this.cows.children.iterate((cow) => {
-      cow.play('walk');
-    });
+    // this.cows.children.iterate((cow) => {
+    //   cow.play('walk');
+    // });
   }
 
   createColliders(){
@@ -349,121 +354,42 @@ export default class Farm extends Scene {
     var c = a.filter(x => x.prop[0].value == tipo)   
     c.forEach(element => {
       if(tipo == 'tomate'){
-        this.add.sprite(element.x, element.y, 'itens', 656); 
-      }else if(tipo == 'morango'){
-        this.add.sprite(element.x, element.y, 'itens', 632); 
-      } else if(tipo == 'milho'){
-        this.add.sprite(element.x, element.y, 'itens', 560); 
+        var tomate = this.add.sprite(element.x, element.y, 'itens', 656); 
+        setTimeout(() => tomate.setTexture('itens', 657), 500)
+        setTimeout(() => tomate.setTexture('itens', 658), 1000)
+        setTimeout(() => tomate.setTexture('itens', 659), 2000)
+      } 
+      if(tipo == 'morango'){
+        var morango = this.add.sprite(element.x, element.y, 'itens', 632); 
+        setTimeout(() => morango.setTexture('itens', 633), 500)
+        setTimeout(() => morango.setTexture('itens', 634), 1000)
+        setTimeout(() => morango.setTexture('itens', 635), 2000)
+      } 
+      if(tipo == 'milho'){
+        var milho = this.add.sprite(element.x, element.y, 'itens', 560); 
+        setTimeout(() => milho.setTexture('itens', 561), 500)
+        setTimeout(() => milho.setTexture('itens', 562), 1000)
+        setTimeout(() => milho.setTexture('itens', 563), 2000)
       }
     });
   }
 
-  // exibirDialago(){
-  //   const dialogBox = this.add.graphics();
-  //   dialogBox.fillStyle(0x000000, 0.8);
-  //   dialogBox.fillRect(100, 200, 600, 200);
+  initAnimations(anim){
+    anim.create({
+      key: 'plantar',
+      frames: this.anims.generateFrameNumbers('itens', { start: 656, end: 659 }), // Substitua start e end pelos quadros desejados
+      frameRate: 10, // Velocidade da animação em quadros por segundo
+      repeat: -1 // -1 para repetir a animação indefinidamente, ou qualquer número de repetições desejado
+    });
+    this.anims.play('plantar');
 
-  //   // Criar botão "Sim"
-  //   const yesButton = this.add.text(250, 300, 'Sim', { fill: '#ffffff' })
-  //     .setInteractive()
-  //     .setDepth(10)
-  //     .on('pointerdown', () => {
-  //       // Lógica para quando o usuário clicar em "Sim"
-  //       console.log('Usuário selecionou: Sim');
-  //       this.closeDialago();
-  //       yesButton.setVisible(false)
-  //     });
-
-  //   // Criar botão "Não"
-  //   const noButton = this.add.text(450, 300, 'Não', { fill: '#ffffff' })
-  //     .setInteractive()
-  //     .setDepth(10)
-  //     .on('pointerdown', () => {
-  //       // Lógica para quando o usuário clicar em "Não"
-  //       console.log('Usuário selecionou: Não');
-  //       this.closeDialago();
-  //       noButton.setVisible(false)
-  //     });
-  //   }
-
-
-  // Refatorar
-  atualizarLixeira(corLixeira, objeto, frame){
-    const lixeira = this.add.sprite(objeto, 48, 'Lixeira', frame); 
-
-    if(corLixeira == 'Laranja'){
-      this.input.keyboard.on('keydown', (event) => {
-        if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-          lixeira.setTexture('Lixeira', 0);
-        }
-      });
-    } else if(corLixeira == 'Azul'){
-      this.input.keyboard.on('keydown', (event) => {
-        if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight' ) {
-          lixeira.setTexture('Lixeira', 3);
-        }
-      });
-    }
   }
-
+ 
   closeModal(){
     this.textDialago.setVisible(false);
     this.telaDialago.setVisible(false);
   }
-
-  // dialago(texto){
-  //   this.telaDialago = this.add.graphics();
-  //   const width = CONFIG.GAME_WIDTH;
-  //   const height = CONFIG.GAME_HEIGHT;
-
-  //   const boxWidth = width * 0.6;
-  //   const boxHeight = height * 0.1;
-
-  //   const boxX = width / 2 - boxWidth / 2;
-  //   const boxY = height / 2 - boxHeight / 2;
-
-  //   this.telaDialago.fillStyle(0x000000, 0.7);
-  //   this.telaDialago.fillRect(boxX, boxY, boxWidth, boxHeight);
-
-  //   const textStyle = {
-  //     fontFamily: 'Arial',
-  //     fontSize: '18px',
-  //     color: '#ffffff',
-  //     aling: 'center',
-  //     wordWrap: { width: boxWidth - 20, useAdvancedWrap: true }
-  //   };
-
-  //   const textX = boxX + 10;
-  //   const textY = boxY + 10;
-
-  //   this.textDialago = this.add.text(textX, textY, texto, textStyle);
-
-  //   // Quando mover o player
-  //   this.input.keyboard.on('keydown', (event) => {
-  //     if (event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
-  //       this.textDialago.setVisible(false);
-  //       this.telaDialago.setVisible(false);
-  //     }
-  //   });
-  // };
-  
-  sentarNaCadeira(object) {
-    this.taSentado = true;
-    // this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.UP);
-    // this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.DOWN);
-    // this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
-    // this.input.keyboard.removeKey(Phaser.Input.Keyboard.KeyCodes.RIGHT);
-    const { x, y } = object.getCenter();
-    this.player.setPosition(x - 9, y - 9);
-    this.player.play('sit-right', true);
-    this.player.direction = 'up';
-  }
-
-  sairDaCadeira() {
-    console.log("espaço");
-    this.taSentado = false;
-  }
-
+    
   Collided(){
     console.log('Collided');
   };
