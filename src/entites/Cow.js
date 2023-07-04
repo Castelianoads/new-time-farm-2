@@ -12,7 +12,7 @@ export default class Cow extends Phaser.Physics.Arcade.Sprite {
   }
 
   init() {
-    this.setFrame(0);
+    this.setFrame(1);
 
     this.speed = 5;
     this.frameRate = 8;
