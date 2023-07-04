@@ -341,11 +341,11 @@ export default class Farm extends Scene {
   plantarUnitario(objeto){
     const tipo = objeto.prop[0].value;
     if(tipo == 'tomate'){
-      this.add.sprite(objeto.x, objeto.y, 'itens', 656); 
+      this.animation(tipo, objeto.x, objeto.y) 
     }else if(tipo == 'morango'){
-      this.add.sprite(objeto.x, objeto.y, 'itens', 632); 
+      this.animation(tipo, objeto.x, objeto.y) 
     } else if(tipo == 'milho'){
-      this.add.sprite(objeto.x, objeto.y, 'itens', 560); 
+      this.animation(tipo, objeto.x, objeto.y) 
     }
   }
   
@@ -353,25 +353,29 @@ export default class Farm extends Scene {
     var a = objects.children.entries.filter(x => x.name == 'terra')
     var c = a.filter(x => x.prop[0].value == tipo)   
     c.forEach(element => {
-      if(tipo == 'tomate'){
-        var tomate = this.add.sprite(element.x, element.y, 'itens', 656); 
-        setTimeout(() => tomate.setTexture('itens', 657), 500)
-        setTimeout(() => tomate.setTexture('itens', 658), 1000)
-        setTimeout(() => tomate.setTexture('itens', 659), 2000)
-      } 
-      if(tipo == 'morango'){
-        var morango = this.add.sprite(element.x, element.y, 'itens', 632); 
-        setTimeout(() => morango.setTexture('itens', 633), 500)
-        setTimeout(() => morango.setTexture('itens', 634), 1000)
-        setTimeout(() => morango.setTexture('itens', 635), 2000)
-      } 
-      if(tipo == 'milho'){
-        var milho = this.add.sprite(element.x, element.y, 'itens', 560); 
-        setTimeout(() => milho.setTexture('itens', 561), 500)
-        setTimeout(() => milho.setTexture('itens', 562), 1000)
-        setTimeout(() => milho.setTexture('itens', 563), 2000)
-      }
+      this.animation(tipo, element.x, element.y)
     });
+  }
+
+  animation(tipo, elementX, elementY){
+    if(tipo == 'tomate'){
+      var tomate = this.add.sprite(elementX, elementY, 'itens', 656); 
+      setTimeout(() => tomate.setTexture('itens', 657), 60000)
+      setTimeout(() => tomate.setTexture('itens', 658), 60000)
+      setTimeout(() => tomate.setTexture('itens', 659), 60000)
+    } 
+    if(tipo == 'morango'){
+      var morango = this.add.sprite(elementX, elementY, 'itens', 632); 
+      setTimeout(() => morango.setTexture('itens', 633), 60000)
+      setTimeout(() => morango.setTexture('itens', 634), 60000)
+      setTimeout(() => morango.setTexture('itens', 635), 60000)
+    } 
+    if(tipo == 'milho'){
+      var milho = this.add.sprite(elementX, elementY, 'itens', 560); 
+      setTimeout(() => milho.setTexture('itens', 561), 60000)
+      setTimeout(() => milho.setTexture('itens', 562), 60000)
+      setTimeout(() => milho.setTexture('itens', 563), 60000)
+    }
   }
 
   initAnimations(anim){
